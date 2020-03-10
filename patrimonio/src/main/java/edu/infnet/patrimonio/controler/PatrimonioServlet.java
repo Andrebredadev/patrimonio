@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import edu.infnet.patrimonio.modelo.Patrimonio;
 import edu.infnet.patrimonio.negocio.servico.PatrimonioService;
 
-@WebServlet(name="patrimonio", urlPatterns = "")
+@WebServlet(name="patrimonio", urlPatterns = "/ListSrv")
 public class PatrimonioServlet extends HttpServlet{
 	
 	private PatrimonioService service;
@@ -32,7 +32,7 @@ public class PatrimonioServlet extends HttpServlet{
 			
 			List<Patrimonio> patrimonio = service.listaPatrimonio();
 			req.setAttribute("patrimonio", patrimonio);
-			req.getRequestDispatcher("patrimonio_list.jsp").forward(req, resp);					
+			req.getRequestDispatcher("pages/patrimonio_list.jsp").forward(req, resp);					
 
 			
 		}

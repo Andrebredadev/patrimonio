@@ -1,1 +1,1 @@
-<jsp:forward page="patrimonio_list.jsp"></jsp:forward>
+<jsp:forward page="ListSrv"></jsp:forward>

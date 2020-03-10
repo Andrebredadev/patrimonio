@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Lista de Patrimonio</h1>
-<a href="patrimonio_cadastro.jsp" class="btn btn-primary">Novo Cadastro</a>
+<a href="pages/patrimonio_cadastro.jsp" class="btn btn-primary">Novo Cadastro</a>
 
 <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>

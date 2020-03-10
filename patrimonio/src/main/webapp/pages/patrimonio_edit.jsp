@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel='stylesheet' type="text/css" href='<c:url value="css/bootstrap.min.css"></c:url>'>
+<link rel='stylesheet' type="text/css" href='<c:url value="/css/bootstrap.min.css"></c:url>'>
 <meta charset="ISO-8859-1">
 <title>Editar Patrimonio</title>
 </head>
@@ -54,7 +54,7 @@
 		          
 		          <button 
 		            type="submit"
-		            class="btn btn-success"
+		            class="btn btn-success"		            
 		           >Editar</button>
 		           
 		           <button type="button" class="btn btn-primary" onclick="window.history.back()">Voltar</button>   

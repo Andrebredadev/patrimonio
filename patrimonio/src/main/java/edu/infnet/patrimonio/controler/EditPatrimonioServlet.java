@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import edu.infnet.patrimonio.modelo.Patrimonio;
 import edu.infnet.patrimonio.negocio.servico.PatrimonioService;
 
-@WebServlet(name="patrimonio_edit", urlPatterns = "/EditPatrimonioSrv")
+@WebServlet(name="PatrimonioEdit", urlPatterns = "/EditPatrimonioSrv")
 public class EditPatrimonioServlet extends HttpServlet {
 	
 	private PatrimonioService service;
@@ -23,16 +23,18 @@ public class EditPatrimonioServlet extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		int id = Integer.parseInt(req.getParameter("id"));
 		Patrimonio patrimonio = service.buscarID(id);
 		req.setAttribute("patrimonio", patrimonio);
-        req.getRequestDispatcher("patrimonio_edit.jsp").forward(req, resp);
+        req.getRequestDispatcher("pages/patrimonio_edit.jsp").forward(req, resp);
 		
 		
 	}
 	
+	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		int id = Integer.parseInt(req.getParameter("id"));
@@ -48,7 +50,13 @@ public class EditPatrimonioServlet extends HttpServlet {
 		
 		service.editarPatrimonio(patrimonio);
 		
+		//resp.sendRedirect("ListSrv");
 		resp.sendRedirect(req.getContextPath());
+		
+		
+;
 	}
+	
+
 
 }

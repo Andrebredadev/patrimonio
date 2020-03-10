@@ -28,7 +28,7 @@ public class CadastrarPatrimonioServlet extends HttpServlet{
 		
 		if("new".equals(action)) {
 
-			req.getRequestDispatcher("patrimonio_cadastro.jsp").forward(req, resp);;		
+			req.getRequestDispatcher("pages/patrimonio_cadastro.jsp").forward(req, resp);;		
 			
 		}
 		
